@@ -12,6 +12,9 @@ class TestBillInfoScraper(unittest.TestCase):
 		valid login information
 		"""
 		account_page = os.path.join("test_files","account_page.html")
+		bill_due_date = 'August 16, 2018'
+		payment_amount = '$114.09'
+		usage = [('01/25/2017','704'),('02/23/2017','493'),('03/24/2017','582'),('04/25/2017','961'),('05/24/2017','751'),('06/23/2017','957'),('07/25/2017','1272'),('08/23/2017','1138'),('09/22/2017','1081'),('10/23/2017', '1022'),('11/22/2017','798'),('12/22/2017','638'),('01/24/2018','604'),('02/22/2018','482'),('03/23/2018','631'),('04/24/2018','674'),('05/23/2018','859'),('06/22/2018','985'),('07/24/2018','1098')]
 		with open(account_page,"rb") as fh:
 			mock_content = fh
 			with patch.object(requests,"post") as post_mock:
@@ -19,6 +22,9 @@ class TestBillInfoScraper(unittest.TestCase):
 				mock_response.content = fh
 				scraper = bill_info_scraper.BillInfoScraper("test","test","test","test")
 				scraper.get_bill_info()
+		self.assertEquals(bill_due_date,scraper.bill_due_date)
+		self.assertEquals(payment_amount,scraper.bill_amount)
+		self.assertEquals(usage,scraper.usage_data)
 	def testInvalidAccountPage(self):
 		"""
 		Verifying InvalidLoginException gets raised in the event user enters
