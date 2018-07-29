@@ -65,13 +65,13 @@ class BillInfoScraper(object):
 
 if __name__ == '__main__':
 	usage = "Web scraper that retrieves user electric bill info"
-	parser = argparse.ArgumentParser()
-	parser.add_argument('-u','--username', dest='username', required=True)
-	parser.add_argument('-p','--password', dest='password', required=True)
-	parser.add_argument('-f','--form-url', dest='form_url', default='https://mydom.dominionenergy.com:443/siteminderagent/forms/login.fcc')
-	parser.add_argument('-t','--target-url', dest='target_url', default='https://mydom.dominionenergy.com')
+	parser = argparse.ArgumentParser(usage)
+	parser.add_argument('username', nargs=1, help='username for electric bill')
+	parser.add_argument('password', nargs=1, help='password for electric bill')
+	parser.add_argument('-f','--form-url', dest='form_url', default='https://mydom.dominionenergy.com:443/siteminderagent/forms/login.fcc', help='url login information form is submitted to')
+	parser.add_argument('-t','--target-url', dest='target_url', default='https://mydom.dominionenergy.com', help='base url login information form is submitted to')
 	args = parser.parse_args()
-	scraper = BillInfoScraper(args.username,args.password,args.target_url,args.form_url)
+	scraper = BillInfoScraper(args.username[0],args.password[0],args.target_url,args.form_url)
 	try:
 		scraper.get_bill_info()
 	except LoginException as e:

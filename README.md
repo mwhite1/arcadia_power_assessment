@@ -9,7 +9,7 @@ This repository contains the code for the Arcadia Power assessment
 
 ## bill_info_scraper.py
     Web scraper that retrieves user power bill information
-    usage: python bill_info_scraper <args> 
+    usage: python bill_info_scraper username password [options] 
     username: User name to submit to server
     password: Password to submit to server
     form-url: Url for login form.  This is how login information is submitted and verified
