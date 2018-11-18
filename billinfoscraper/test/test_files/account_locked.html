@@ -1,0 +1,716 @@
+<!DOCTYPE html> 
+
+<!-- SiteMinder Encoding=UTF-8; -->
+
+<!-- Please set 
+<!-- Don't change the lines above -->
+
+<HTML>
+
+<HEAD>
+    <title>Dominion Energy</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<link rel="icon" type="image/x-icon" href="/siteminderagent/forms/dominion.ico"/>
+	<link rel="shortcut icon" type="image/x-icon" href="/siteminderagent/forms/dominion.ico"/>
+	<link rel="apple-touch-icon" href="/siteminderagent/forms/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon-precomposed" href="/siteminderagent/forms/images/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/siteminderagent/forms/images/apple-touch-icon-ipad-standard-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/siteminderagent/forms/images/apple-touch-icon-iphone-hidef-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/siteminderagent/forms/images/apple-touch-icon-ipad-hidef-precomposed.png">
+	
+<script>
+    var badIE = false;
+</script>
+
+<!-- Google Tag Manager-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGXXDJB');</script>
+<!-- End Google Tag Manager -->
+
+
+<!--[if lte IE 7]>
+<script type="text/javascript">badIE = true;</script>
+<![endif]-->
+
+<!--
+<script>
+if (badIE == true){
+    document.location.href = "browserupgrade.htm";
+} 
+</script>
+-->
+
+	
+	<link href="/siteminderagent/forms/css/site.css" rel="stylesheet" media="screen">
+    <!-- Bootstrap -->
+    <link href="/siteminderagent/forms/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Overrides -->
+    <link href="/siteminderagent/forms/css/mydom_common.css" rel="stylesheet" media="screen">
+    <link href="/siteminderagent/forms/css/mydom_common_navbar.css" rel="stylesheet" media="screen">
+    
+    	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/siteminderagent/forms/js/jquery.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/siteminderagent/forms/js/bootstrap.min.js"></script>
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lte IE 8]> 
+        <script src="/siteminderagent/forms/js/ie8-and-below.js"></script>
+    <![endif]-->  
+	
+    <!--[if lt IE 8]>
+            <script src="/siteminderagent/forms/js/html5shiv-3.7.0.js"></script>
+            <script src="/siteminderagent/forms/js/respond.js"></script>
+    <![endif]-->	    
+	<!--[if IE 8]>
+            <script src="/siteminderagent/forms/js/html5shiv-3.7.0.js"></script>
+            <script src="/siteminderagent/forms/js/respond.min-1.4.2.js"></script>
+    <![endif]-->
+	
+    <!--[if gt IE 8]><!-->
+        <script src="/siteminderagent/forms/js/ie9-above-and-nonie.js"></script>
+    <!--<![endif]-->
+
+    <!-- to allow retail to hide links -->
+    <script src="/siteminderagent/forms/js/RetailExternal.js"></script> 
+
+	<!-- Cross-frame scripting prevention: This code will prevent this page from being encapsulated within HTML frames. Remove, or comment out, this code if the functionality that is contained in this SiteMinder page is to be included within HTML frames. -->
+    <SCRIPT>  
+     if (top !=self) 
+     top.location=self.location; 
+    </SCRIPT>
+	
+	<SCRIPT language='JavaScript'>
+	function searchKeyPress(e)
+	{
+		// look for window.event in case event isn't passed in
+		if (typeof e == 'undefined' && window.event) { e = window.event; }
+		if (e.which || e.keyCode)
+		{
+			if ((e.which == 13) || (e.keyCode ==13))
+			{
+				document.getElementById('Enter').click();			
+			}
+		}		
+	}
+
+	function resetCredFields()
+	{		
+		if (24 == 0 || 24 == 4 || 24 == 5 || 24 == 28 || 24 == 30 )
+		{
+			document.PWChange.PASSWORD.value = '';
+		}
+		else if (24 == 1 || 24 == 18 || 24 == 20 || 24 == 22 || 24 == 31 || 24 == 34)
+		{
+			document.PWChange.NEWPASSWORD.value = '';
+			document.PWChange.CONFIRMATION.value = '';
+		}
+	}
+	
+	var errorMessage="";
+	
+	function GetErrorMessage()
+	{
+		return errorMessage;
+	}
+	
+	function SetErrorMessage(message)
+	{
+		errorMessage=errorMessage.concat(message);
+	}
+	
+	function ResetErrorMessage()
+	{
+		errorMessage="<p><img src='/siteminderagent/forms/images/fv_Icon-error.png' title='Error' alt='Error' /> <strong>Please correct the following and try again.</strong></p>";
+	}
+	
+	// Function for Validating Forms
+	function CheckForm(form)
+	{
+		ResetErrorMessage();	
+		
+		var errorDiv = document.getElementById("errorDiv");
+		errorDiv.className="hidden";	
+		
+		var userNameFormGroup = document.getElementById("userNameFormGroup");		
+		var passwordFormGroup = document.getElementById("passwordFormGroup");		
+		var newPasswordFormGroup = document.getElementById("newPasswordFormGroup");		
+		var passwordConfirmationFormGroup = document.getElementById("passwordConfirmationFormGroup");		
+		var pinFormGroup = document.getElementById("pinFormGroup");		
+	
+		if (24 == 1 || 24 == 18 || 24 == 20 || 24 == 21 || 24 == 22 || 24 == 31 || 24 == 34)
+		{
+			passwordFormGroup.className="form-group";
+			newPasswordFormGroup.className="form-group";
+			passwordConfirmationFormGroup.className="form-group";
+		
+			if(form.PASSWORD.value == "" || form.NEWPASSWORD.value == "" || form.CONFIRMATION.value == "" || form.NEWPASSWORD.value != form.CONFIRMATION.value || form.PASSWORD.value == form.NEWPASSWORD.value)
+			{			
+				if ( form.PASSWORD.value == "" ){
+					SetErrorMessage("<p>Temporary password is required.</p>");
+					form.PASSWORD.focus()
+					passwordFormGroup.className="form-group has-error";
+				}
+				if ( form.NEWPASSWORD.value == "" ){
+					SetErrorMessage("<p>New password is required.</p>");
+					form.NEWPASSWORD.focus()
+					newPasswordFormGroup.className="form-group has-error";
+				}
+				if ( form.CONFIRMATION.value == "" ){
+					SetErrorMessage("<p>New password confirmation is required.</p>");
+					form.CONFIRMATION.focus()
+					passwordConfirmationFormGroup.className="form-group has-error";
+				}
+				if ( form.NEWPASSWORD.value != form.CONFIRMATION.value ){
+					SetErrorMessage("<p>New password confirmation must match new password.</p>");
+					form.NEWPASSWORD.focus()
+					newPasswordFormGroup.className="form-group has-error";
+					passwordConfirmationFormGroup.className="form-group has-error";					
+				}
+				if ( form.PASSWORD.value == form.NEWPASSWORD.value ){
+					SetErrorMessage("<p>New password cannot match temporary password.</p>");
+					form.NEWPASSWORD.focus()
+					passwordFormGroup.className="form-group has-error";
+					newPasswordFormGroup.className="form-group has-error";					
+				}
+				errorDiv.className="alert alert-danger";
+				errorDiv.innerHTML=GetErrorMessage();
+				return false
+			}
+			else {
+				errorDiv.className="hidden";
+				form.submit()
+				return	true
+			}
+		}
+		else if (24 == 0 || 24 == 4 || 24 == 5 || 24 == 28 || 24 == 30)
+		{
+			userNameFormGroup.className="form-group";
+			passwordFormGroup.className="form-group";
+			
+			if ( form.username.value == "" || form.PASSWORD.value == ""){					
+					if ( form.username.value == ""){					
+						SetErrorMessage("<p>User name is required.</p>");					
+						form.username.focus();
+						userNameFormGroup.className="form-group has-error";						
+					}
+					if ( form.PASSWORD.value == "" ){						
+						SetErrorMessage("<p>Temporary password is required.</p>");
+						form.PASSWORD.focus();
+						passwordFormGroup.className="form-group has-error";
+					}
+				errorDiv.className="alert alert-danger";
+				errorDiv.innerHTML=GetErrorMessage();					
+				return false;
+			}			
+			else {
+				errorDiv.className="hidden";
+				form.submit()
+				return	true
+			}
+		}
+		else if (24 == 29)
+		{
+		
+			userNameFormGroup.className="form-group";
+			passwordFormGroup.className="form-group";
+			pinFormGroup.className="form-group";
+		
+			if ( form.username.value == "" || form.PASSWORD.value == "")
+			{
+			
+				if ( form.username.value == "" ){
+						SetErrorMessage("<p>User name is required.</p>");					
+						form.username.focus();
+						userNameFormGroup.className="form-group has-error";	
+				}
+				if ( form.PASSWORD.value == "" ){
+						SetErrorMessage("<p>Temporary password is required.</p>");
+						form.PASSWORD.focus();
+						passwordFormGroup.className="form-group has-error";
+				}
+				errorDiv.className="alert alert-danger";
+				errorDiv.innerHTML=GetErrorMessage();					
+				return false;
+			}
+			else if ( form.SELECT.checked ){
+				errorDiv.className="hidden";
+				form.NEWPASSWORD.value = "SYSTEM"
+				form.submit()
+				return	true
+			}
+			else {
+				errorDiv.className="hidden";
+				form.NEWPASSWORD.value = "NONSYSTEM"
+				form.submit()
+				return	true
+			}
+		}
+	}
+
+	function submitform ()
+	{
+		if (24 == 18){
+			document.forms['PWChange'].elements['smauthreason'].value = 23
+			document.PWChange.submit();
+		}
+		else if (24 == 23 || 24 == 32){
+			document.PWChange.submit()
+		}
+	}
+
+	function clearSubmit ()
+	{
+		document.PWChange.PASSWORD.value = '';
+		document.PWChange.NEWPASSWORD.value = '';
+		document.PWChange.CONFIRMATION.value = '';
+		submitform();
+	}
+	</SCRIPT>
+</HEAD>
+
+<BODY class="hideWhileLoading" onLoad = 'resetCredFields();'>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGXXDJB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--Navigation Container that Spans Full Width of the Page-->
+
+<!--[if gt IE 7]><!-->
+
+	<div class="navbar-default navbar-fixed-top">
+		<!--Navigation Container with a Max Width Defined by Dominion Energy-->
+		<div class="maxWidthContainer">
+		  <!--Bootstrap Global Navigation Control-->
+		  <nav class="navbar" role="navigation">
+			  <!--Container for Dominion Energy Logo and Mobile Toggle Button-->
+			  <div class="navbar-header">
+				<!--Mobile Global Navigation Toggle Button-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mydom-nav-menu">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<!--Dominion Energy Logo-->
+				<a class="navbar-brand" href="http://www.dominionenergy.com"><img class="domLogo" alt="Dominion Energy Logo" src="/siteminderagent/forms/images/Logo.PNG" /></a> 
+			  </div>
+			  <!-- Navigation Menu Container -->
+			  <div class="collapse navbar-collapse" id="mydom-nav-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/registration/index" >Register</a></li>
+						<li class="active"><a href="/">Sign In</a></li>		  
+					</ul>
+			  </div>
+			</nav>
+		</div>
+	</div>	
+<!--<![endif]-->
+	
+	<!--Content Area Container with a Max Width Defined by Dominion Energy-->
+	<div class="maxWidthContainer">
+		<!--Primary Container for Content on the Page-->
+		<div class="primaryContentContainer">
+			<!--Page Title-->
+			<div class="row">			
+				<div class="col-md-12 col-xs-12 col-sm-12">
+					<h1>Sign In</h1>
+				</div>
+			</div>
+			<!--Content Area-->				
+			<div class="row">					
+				<div class="col-md-7 col-xs-12 col-sm-7 primaryCol">
+					<form name='PWChange' method='POST'>
+						<SCRIPT language='JavaScript'>
+						document.write("<div class='hidden' id='errorDiv'></div>");
+						if (24 == 18 || 24 == 19 || 24 == 20 || 24 == 22 || 24 == 34)	                       
+							document.write("<h4>Password Change Request</h4>");
+						else if (24 == 1)
+							document.write("<h4>Please Change Your Password</h4>");
+						else if (24 == 23)
+							document.write("<h4>Password Change Information</h4>");
+						else if (24 == 28)
+							document.write("<h4>Next Tokencode Request</h4>");			
+						else if (24 == 29)
+							document.write("<h4>New PIN Selection</h4>");			
+						else if (24 == 30 || 24 == 31 || 24 == 32 )
+							document.write("<h4>New PIN Assignment</h4>");								
+						</SCRIPT>	
+						<SCRIPT language='JavaScript'>
+						//Auth Reason 0 - Reason none
+						//Auth Reason 4 - Session Expired
+						//Auth Reason 5 - AuthLevelTooLow
+						// Auth Reason 30 - Sm_Api_Reason_New_PIN_Sys_Tokencode 
+						
+						var forgotpasswordURL = "/registration/forgotpassword";
+						var forgotuserURL = "/registration/forgotusername";	
+						var registerURL = "/registration/index";
+						if (24 == 0 || 24 == 4 || 24 == 5 || 24 == 30)
+						{									
+							if (24 == 0)
+							{
+							document.write("<p>Enter your user name and password below to sign in. <a href='" + registerURL + "'>Register</a> a profile to manage your Dominion Energy account(s) online.</p>");
+							}
+							else if (24 == 4)
+							{
+							document.write("<p>Your session has expired. Please enter your user name and password.</p>");
+							}
+							else if (24 == 5)
+							{
+							document.write("<p>A higher authorization level is needed. Please enter your user name and password.</p>");
+							}
+							else if (24 == 30)
+							{
+							document.write("<p>To continue a new system-generated PIN is required.</p>");
+							document.write("<p>Wait for the tokencode to change, then enter a password consisting of your current PIN followed by the tokencode. </p>");
+							}
+							document.write("<div id='userNameFormGroup' class='form-group'>");
+							document.write("	<label class='control-label'>User Name</label>");
+							document.write("    <input class='form-control' type='text' name='username' size='30' tabindex=1onkeydown='searchKeyPress(event);'>");
+							document.write("	<div class='row'><a href='" + forgotuserURL + "'>Forgot Your User Name?</a></div>");						
+							document.write("</div>");
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("	<div class='row'><a href='" + forgotpasswordURL + "'>Forgot Your Password?</a></div>");	
+							document.write("</div>");
+						} //Auth Reason - 0,4,5 and 30						
+						//Auth Reason 7 - Account disabled
+						else if (24 == 7) 
+						{
+							document.write("<div class='alert alert-danger'><h4><img src='/siteminderagent/forms/images/fv_Icon-error.png' title='Error' alt='Error' /> Account Disabled</h4><p><strong>abhalla1</strong>, you cannot access your Dominion Energy online account at this time because it has been disabled.</p></div>");
+							document.write("<p>You may also try to <a href='/'>Sign In</a> with different credentials or <a href='" + registerURL + "'>Register</a> a new profile.</p>");
+							document.write("<p>Go back to <a href='https://www.dominionenergy.com/'>www.dominionenergy.com</a></p>");
+						} //Auth Reason - 7
+
+						//Auth Reason = 18 - Password change option
+						else if (24 == 18)
+						{						  
+							if ("abhalla1" == "")
+							{
+								document.write("<p>6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA%3d</p><p>Please update your temporary password before accessing your Dominion Energy online account.</p>");
+								document.write("<div id='userNameFormGroup' class='form-group'>");
+								document.write("	<label class='control-label'>User Name</label>");
+								document.write("    <input class='form-control' type='text' name='username'size='30' tabindex=1 onkeydown='searchKeyPress(event);'>");
+								document.write("	<div class='row'><a href='" + forgotuserURL + "'>Forgot Your User Name?</a></div>");	
+								document.write("</div>");
+							}
+							else 
+							{
+								document.write("<p><strong>abhalla1</strong></p><p>6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA%3d</p><p>Please update your temporary password before accessing your Dominion Energy online account.</p>");
+							}
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Temporary Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='newPasswordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>New Password</label>");
+							document.write("	<span data-original-title='Your password must contain at least eight characters, including at least one number, one lower case character, and one upper case character. Your password cannot contain the same character three consecutive times. Ex: ExamplePassword1' class='helpico pull-right alignTop' data-trigger='click hover' data-delay='200' data-toggle='tooltip' data-placement='left' data-container='body' title='' id='newPasswordInfo'></span>");
+							document.write("    <input class='form-control' type='password' name='NEWPASSWORD' autocomplete='off' size='30' tabindex=3 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordConfirmationFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Confirm New Password</label>");
+							document.write("    <input class='form-control' type='password' name='CONFIRMATION' autocomplete='off' size='30' tabindex=4 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+						} //Auth Reason = 18
+						//Auth Reason 19 - Account disabled due to inactivity      
+						else if (24 == 19)
+						{
+							document.write("<div class='alert alert-danger'><h4><img src='/siteminderagent/forms/images/fv_Icon-error.png' title='Error' alt='Error' /> Account Disabled</h4><p><strong>abhalla1</strong>, you cannot access your Dominion Energy online account because your password has expired.</p></div>");
+							document.write("<p>You may also try to <a href='/'>Sign In</a> with different credentials or <a href='" + registerURL + "'>Register</a> a new profile.</p>");
+							document.write("<p>Go back to <a href='https://www.dominionenergy.com/'>www.dominionenergy.com</a></p>");
+						} //Auth Reason - 19
+						// Auth Reason 1 - Password must change
+						// Auth Reason 20 - Password change immediately
+						// Auth Reason 21 - Password change failed
+						// Auth Reason 22 - Bad Password
+						else if (24 == 1 || 24 == 20 || 24 == 21 || 24 == 22)
+						{
+							// password must change
+							if ("abhalla1" == "")
+							{						   
+								if (24 == 1 || 24 == 20)
+								{
+									document.write("<p>Please update your temporary password before accessing your Dominion Energy online account.</p>");
+								}
+								else if (24 == 21)
+								{
+									document.write("<div class='alert alert-warning'><p><img src='/siteminderagent/forms/images/fv_Icon-warning.png' title='Warning' alt='Warning' /> <strong>Please try again.</strong></p><p>Your password change request was not processed correctly.</p></div>");
+								}
+								else if (24 == 22)
+								{
+									document.write("<div class='alert alert-warning'><p><img src='/siteminderagent/forms/images/fv_Icon-warning.png' title='Warning' alt='Warning' /> <strong>Please try again.</strong></p><p>Your password change was not accepted.</p><p>6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA%3d</p></div>");
+								}
+								document.write("<div id='userNameFormGroup' class='form-group'>");
+								document.write("	<label class='control-label'>User Name</label>");
+								document.write("	<input class='form-control' type='text' name='username' size='30'tabindex=1 onkeydown='searchKeyPress(event);'>");
+								document.write("	<div class='row'><a href='" + forgotuserURL + "'>Forgot Your User Name?</a></div>");	
+								document.write("</div>");
+							}
+							else
+							{
+								if (24 == 1 || 24 == 20)
+								{
+									document.write("<p><strong>abhalla1</strong>, please update your temporary password before accessing your Dominion Energy online account.</p>");
+								}
+								else if (24 == 21)
+								{
+									document.write("<div class='alert alert-warning'><p><img src='/siteminderagent/forms/images/fv_Icon-warning.png' title='Warning' alt='Warning' /> <strong>Please try again.</strong></p><p><strong>abhalla1</strong>, your password change request was not processed correctly.</p></div>");
+								}
+								else if (24 == 22)
+								{
+									document.write("<div class='alert alert-warning'><p><img src='/siteminderagent/forms/images/fv_Icon-warning.png' title='Warning' alt='Warning' /> <strong>Please try again.</strong></p><p><strong>abhalla1</strong>, your password change was not accepted.</p><p>6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA%3d</p></div>");
+								}
+							}
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Temporary Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='newPasswordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>New Password</label>");
+							document.write("	<span data-original-title='Your password must contain at least eight characters, including at least one number, one lower case character, and one upper case character. Your password cannot contain the same character three consecutive times. Ex: ExamplePassword1' class='helpico pull-right alignTop' data-trigger='click hover' data-delay='200' data-toggle='tooltip' data-placement='left' data-container='body' title='' id='newPasswordInfo'></span>");
+							document.write("    <input class='form-control' type='password' name='NEWPASSWORD' autocomplete='off' size='30' tabindex=3 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordConfirmationFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Confirm New Password</label>");
+							document.write("    <input class='form-control' type='password' name='CONFIRMATION' autocomplete='off' size='30' tabindex=4 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+						} // Auth Reason 1, 20, 21 & 22						
+						 //Auth Reason = 23 - Password Change Accepted
+						else if (24 == 23) 
+						{
+							 document.write("<div class='alert alert-success'><p><img src='/siteminderagent/forms/images/fv_Icon-success.png' title='Success' alt='Success' /> <strong>abhalla1</strong>, you have successfully updated your password, you may now access your Dominion Energy online account. Use this new password the next time you sign in.</p></div>");
+							 document.write("<input type='button' id='Enter' class='btn btn-success' name='ContinueButton' value='Sign In' tabindex=6 onClick='submitform();''>");						  
+						}  //Auth Reason =23    
+						//Auth Reason 24 - Account disabled due to excess Login
+						else if (24 == 24)
+						{
+							document.write("<div class='alert alert-danger'><h4><img src='/siteminderagent/forms/images/fv_Icon-error.png' title='Error' alt='Error' /> Account Locked</h4><p>Access to your Dominion Energy online account has been locked for one hour because you have exceeded the maximum number of sign in attempts. After one hour, please use the <a href='" + forgotuserURL + "'>Forgot Your User Name?</a> and/or <a href='" + forgotpasswordURL + "'>Forgot Your Password?</a> features to retrieve your information.</p></div>");
+							document.write("<p>You may also try to <a href='/'>Sign In</a> with different credentials or <a href='" + registerURL + "'>Register</a> a new profile.</p>");
+							document.write("<p>Go back to <a href='https://www.dominionenergy.com/'>www.dominionenergy.com</a></p>");
+						} //Auth Reason - 24
+						//Auth Reason 25 - account has been disabled due to inactivity       
+						else if (24 == 25)
+						{
+							document.write("<div class='alert alert-danger'><h4><img src='/siteminderagent/forms/images/fv_Icon-error.png' title='Error' alt='Error' /> Account Disabled</h4><p><strong>abhalla1</strong>, your Dominion Energy online account has been disabled due to inactivity.</p></div>");
+							document.write("<p>You may also try to <a href='/'>Sign In</a> with different credentials or <a href='" + registerURL + "'>Register</a> a new profile.</p>");
+							document.write("<p>Go back to <a href='https://www.dominionenergy.com/'>www.dominionenergy.com</a></p>");
+						} //Auth Reason - 25
+						//Auth Reason 28 - Sm_Api_Reason_Next_Tokencode
+						else if (24 == 28)
+						{
+							document.write("<p>Wait for the Tokencode to change, then enter your PIN followed by the tokencode</p>");
+							document.write("<p>Finally, wait for the tokencode to change again, then enter only the tokencode.</p>");
+							document.write("<div id='userNameFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>User Name</label>");
+							document.write("    <input class='form-control' type='text' name='username'size='30' tabindex=1 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='newPasswordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Next Tokencode</label>");
+							document.write("    <input class='form-control' type='password' name='NEWPASSWORD' autocomplete='off' size='30' tabindex=3 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+						} //Auth Reason - 28
+						//Auth Reason 29 - Sm_Api_Reason_New_PIN_Select
+						else if (24 == 29)
+						{
+							document.write("<p>Please register a new PIN to continue.</p>");
+							document.write("<p>Wait for the tokencode to change then enter a password consisting of your current PIN plus the new tokencode.</p>");
+							document.write("<p>If you want the System to automatically assign a PIN select the system PIN checkbox.</p>");
+							document.write("<p>Otherwise, you will be asked to create your own within standard guidelines.</p>");
+							document.write("<div id='userNameFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>User Name</label>");
+							document.write("    <input class='form-control' type='text' name='username'size='30' tabindex=1 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='pinFormGroup' class='form-group'>");
+							document.write("	<label class='control-label'>System PIN Request");
+							document.write("		<input type='checkbox' name='SELECT' size='30' tabindex=5 style='MARGIN-LEFT: 1px' value='1' checked>");
+							document.write("	</label>");
+							document.write("</div>");
+						} //Auth Reason - 29						  
+						  //Auth Reason = 31 - Sm_Api_Reason_New_User_PIN_Tokencode
+						else if (24 == 31)
+						{
+							document.write("<p>6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA%3d</p><p>Wait for the tokencode to change, then enter your current PIN followed by the tokencode.</p>");
+							document.write("<p>Then enter your new PIN and confirm it.</p>");
+							document.write("<div id='userNameFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>User Name</label>");
+							document.write("    <input class='form-control' type='text' name='username'size='30' tabindex=1 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='newPasswordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>New PIN</label>");
+							document.write("    <input class='form-control' type='password' name='NEWPASSWORD' autocomplete='off' size='30' tabindex=3 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordConfirmationFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Confirm New PIN</label>");
+							document.write("    <input class='form-control' type='password' name='CONFIRMATION' autocomplete='off' size='30' tabindex=4 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+						} //Auth Reason - 31
+						//Auth Reason - 32 - Sm_Api_Reason_New_PIN_Accepted
+						else if (24 == 32)
+						{
+							document.write("<p>Your PIN has been accepted.</p><p><strong>6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA%3d</strong></p><p>Use the new PIN when you continue and when you sign in.</p>");
+							document.write("<input type='button' class='btn btn-success' id='Enter' name='ContinueButton' value='CONTINUE' tabindex=6 onClick='submitform();''>");
+						 }  //Auth Reason =32
+						//Auth Reason = 34 - User self password change
+						else if (24 == 34)
+						{
+							document.write("<p>Please enter name and temporary password then propose new password and confirm before continuing.</p>");
+							document.write("<div id='userNameFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>User Name</label>");
+							document.write("    <input class='form-control' type='text' name='username'size='30' tabindex=1 onkeydown='searchKeyPress(event);'>");
+							document.write("	<div class='row'><a href='" + forgotuserURL + "'>Forgot Your User Name?</a></div>");	
+							document.write("</div>");
+							document.write("<div id='passwordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Temporary Password</label>");
+							document.write("    <input class='form-control' type='password' name='PASSWORD' autocomplete='off' size='30' tabindex=2 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='newPasswordFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>New Password</label>");
+							document.write("	<span data-original-title='Your password must contain at least eight characters, including at least one number, one lower case character, and one upper case character. Your password cannot contain the same character three consecutive times. Ex: ExamplePassword1' class='helpico pull-right alignTop' data-trigger='click hover' data-delay='200' data-toggle='tooltip' data-placement='left' data-container='body' title='' id='newPasswordInfo'></span>");
+							document.write("    <input class='form-control' type='password' name='NEWPASSWORD' autocomplete='off' size='30' tabindex=3 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+							document.write("<div id='passwordConfirmationFormGroup' class='form-group'>");
+							document.write("    <label class='control-label'>Confirm New Password</label>");
+							document.write("    <input class='form-control' type='password' name='CONFIRMATION' autocomplete='off' size='30' tabindex=4 onkeydown='searchKeyPress(event);'>");
+							document.write("</div>");
+						} //Auth Reason - 34
+						else
+						{
+							document.write("<div class='alert alert-warning'><p><img src='/siteminderagent/forms/images/fv_Icon-warning.png' title='Warning' alt='Warning' /> Security Protection Fault:<strong> Condition not handled for SMAUTHREASON = 24</strong></p></div>");
+						}
+						</SCRIPT>
+						<SCRIPT language='JavaScript'>
+						if (("abhalla1" != "") && 24 != 0 && 24 != 4 && 24 != 5 && 24 != 28 && 24 != 29 && 24 != 30 && 24 != 34)
+						{
+							document.write("<input class='form-control' type='hidden' name='USERNAME' value='abhalla1'>");
+						}						
+						if ("UTF-8" == "")
+						{
+							document.write("<input class='form-control' type='hidden' name='SMENC' value='UTF-8'>");
+						}
+						else
+						{
+							document.write("<input class='form-control' type='hidden' name='SMENC' value='UTF-8'>");
+						}
+						if (24 == 34)
+						{   
+							document.write("<input class='form-control' type='hidden' name='smpwselfchange' value='0'>");
+						}
+						</SCRIPT>												
+						<input class='form-control' type='hidden' name='SMTOKEN' value=''>
+						<input class='form-control' type='hidden' name='smagentname' value='9MuHaTndmBnE2/6XM3uvK51bOMgT4jKCNSdlNMM9/EbWt1q3F81EmVIudNx1ceVl'>
+						<input class='form-control' type='hidden' name='smauthreason' value='24'>
+						<input class='form-control' type='hidden' name='postpreservationdata' value=''>
+						<input class='form-control' type='hidden' name='target' value='https://mydom.dominionenergy.com/'>
+						<input class='form-control' type='hidden' name='smquerydata' value=''>
+						<SCRIPT language='JavaScript'>						
+						if (24 == 0 || 24 == 1 || 24 == 4 || 24 == 5 || 24 == 21 || 24 == 28 || 24 == 29 || 24 == 30 || 24 == 31 )
+						{
+							document.write("<div class='form-group'>");
+							document.write("	<input type='button' class='btn btn-success buttonInlineMargins' id='Enter' value='Enter' tabindex=7 onClick='CheckForm(this.form)'>");
+							document.write("	<input type='reset' class='btn btn-default' value='Clear this form' tabindex=8>");
+							document.write("</div>");
+						}
+						else if (24 == 18)
+						{
+							document.write("<div class='form-group'>");
+							document.write("	<input type='button' class='btn btn-success buttonInlineMargins' id='Enter' value='Change Password' tabindex=7 onClick='CheckForm(this.form)'>");
+							document.write("	<input type='reset' class='btn btn-default buttonInlineMargins' value='Clear this form' tabindex=8>");
+							document.write("	<input type='button' class='btn btn-default' value='Remind me later' tabindex=9 onClick='clearSubmit()'>");
+							document.write("</div>");
+						}
+						else if (24 == 20 || 24 ==22 || 24 == 34)
+						{
+							document.write("<div class='form-group'>");
+							document.write("	<input type='button' class='btn btn-success buttonInlineMargins' id='Enter' value='Change Password' tabindex=7 onClick='CheckForm(this.form)'>");
+							document.write("	<input type='reset' class='btn btn-default' value='Clear this form' tabindex=8>");
+							document.write("</div>");
+						}						 
+						if (24 == 29)
+						{
+						   document.write("<input class='form-control' type='hidden' name='NEWPASSWORD' value='NONSYSTEM'>");
+						}
+						if (24 == 0 || 24 ==4 || 24 == 5 || 24 == 20 || 24 == 28 || 24 == 29 || 24 == 30 || 24 == 31 || 24 == 34)
+						{
+							document.write("<input class='form-control' type='hidden' name='BUFFER' value='endl'>");
+						}						   
+						</SCRIPT>
+					</form>
+				</div>
+				<!--Contact Us-->
+				<div class="col-md-5 col-xs-12 col-sm-5 sideBarCol">
+					<!--[if gt IE 7]><!-->
+
+						<div class="greyContentArea">
+							<h3>Need Help?</h3>
+							<p>Please contact us if you have any questions or need further assistance.</p>
+							<a class="btn btn-success" href="https://www.dominionenergy.com/about-us/contact-us"  target="_blank">Contact Us</a>
+						</div>
+					<!--<![endif]-->
+					
+				</div>
+			</div><!--Main Row-->		
+		</div><!--primary content container-->
+			<!--Footer-->
+			<!--[if gt IE 7]><!-->
+			<div class="row footerContainer">
+				<a class="footer" href="https://www.dominionenergy.com/privacy" target="_blank">Privacy</a> |
+				<a class="footer" href="https://www.dominionenergy.com/terms-and-conditions" target="_blank">Legal<span class="hideOnMobile"> Terms and Conditions</span></a> |			
+				<a class="footer" href="https://www.dominionenergy.com/para-servirlos" target="_blank">Para Servirlos</a>
+			</div>
+			<!--<![endif]-->
+			<!--Copyright-->
+		<div class="row copyright">
+                Copyright &#169; <script>document.write(new Date().getFullYear())</script> Dominion Energy				
+		</div>
+	</div>
+<!--	<SCRIPT language='JavaScript'>
+    if (24 == 0 || 24 == 4 || 24 == 5 || 24 == 30 || 24 == 31 || 24 == 34)
+    {
+        document.forms['PWChange'].elements['username'].focus();
+    }
+    else if (("abhalla1" != "") && (24 == 1 || 24 == 18 || 24 == 20 || 24 == 21 || 24 == 22))
+    {
+        document.forms['PWChange'].elements['PASSWORD'].focus();
+    }
+	else if(24 == 32 || 24 == 23 )
+	{
+        document.forms['PWChange'].elements['ContinueButton'].focus();
+    }
+	else if (("abhalla1" == "") && (24 == 1 || 24 == 18 || 24 == 20 || 24 == 21 || 24 == 22))
+	{
+		document.forms['PWChange'].elements['username'].focus();
+	}
+
+	</SCRIPT>
+-->
+
+	<script>
+		$('#newPasswordInfo').tooltip();
+	</script>
+
+
+</BODY>
+
+</HTML>

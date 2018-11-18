@@ -1,6 +1,6 @@
 import unittest
 import os
-import bill_info_scraper
+import billinfoscraper
 from mock import Mock
 from mock import patch
 import requests
@@ -20,7 +20,7 @@ class TestBillInfoScraper(unittest.TestCase):
 			with patch.object(requests,"post") as post_mock:
 				post_mock.return_value = mock_response = Mock()
 				mock_response.content = fh
-				scraper = bill_info_scraper.BillInfoScraper("test","test","test","test")
+				scraper = billinfoscraper.BillInfoScraper("test","test","test","test")
 				scraper.get_bill_info()
 		self.assertEquals(bill_due_date,scraper.bill_due_date)
 		self.assertEquals(payment_amount,scraper.bill_amount)
@@ -36,7 +36,7 @@ class TestBillInfoScraper(unittest.TestCase):
 			with patch.object(requests,"post") as post_mock:
 				post_mock.return_value = mock_response = Mock()
 				mock_response.content = fh
-				scraper = bill_info_scraper.BillInfoScraper("test","test","test","test")
+				scraper = billinfoscraper.BillInfoScraper("test","test","test","test")
 				self.assertRaises(bill_info_scraper.InvalidLoginException,scraper.get_bill_info)
 	def testLockedAccountPage(self):
 		"""

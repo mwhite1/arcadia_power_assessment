@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='arcadia_power_assessment',
-    version='0.0.3',
+    version='0.0.4',
     author='Malcolm White',
     author_email='malcolm.m14@gmail.com',
     packages=['billinfoscraper', 'billinfoscraper.test'],
