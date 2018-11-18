@@ -1,0 +1,298 @@
+<!DOCTYPE html> 
+
+
+
+<!-- SiteMinder Encoding=UTF-8; -->
+
+<html>
+
+<head>
+    <title>Dominion Energy</title>
+	<meta charset="utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<link rel="icon" type="image/x-icon" href="/siteminderagent/forms/dominion.ico"/>
+	<link rel="shortcut icon" type="image/x-icon" href="/siteminderagent/forms/dominion.ico"/>
+	<link rel="apple-touch-icon" href="/siteminderagent/forms/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon-precomposed" href="/siteminderagent/forms/images/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/siteminderagent/forms/images/apple-touch-icon-ipad-standard-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/siteminderagent/forms/images/apple-touch-icon-iphone-hidef-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/siteminderagent/forms/images/apple-touch-icon-ipad-hidef-precomposed.png">
+<script>
+    var badIE = false;
+</script>
+
+<!-- Google Tag Manager-->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGXXDJB');</script>
+<!-- End Google Tag Manager -->
+
+
+<!--[if lte IE 8]>
+<script type="text/javascript">badIE = true;</script>
+<![endif]-->
+
+<!--<script>
+
+if (badIE == true ){
+    document.location.href = "browserupgrade.htm";
+} 
+</script>
+-->
+	
+	<link href="/siteminderagent/forms/css/site.css" rel="stylesheet" media="screen">
+    <!-- Bootstrap -->
+    <link href="/siteminderagent/forms/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Overrides -->
+    <link href="/siteminderagent/forms/css/mydom_common.css" rel="stylesheet" media="screen">
+    <link href="/siteminderagent/forms/css/mydom_common_navbar.css" rel="stylesheet" media="screen">
+    
+    	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/siteminderagent/forms/js/jquery.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/siteminderagent/forms/js/bootstrap.min.js"></script>
+
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lte IE 8]> 
+        <script src="/siteminderagent/forms/js/ie8-and-below.js"></script>
+    <![endif]-->  
+	
+    <!--[if lt IE 8]>
+            <script src="/siteminderagent/forms/js/html5shiv-3.7.0.js"></script>
+            <script src="/siteminderagent/forms/js/respond.js"></script>
+    <![endif]-->	    
+	<!--[if IE 8]>
+            <script src="/siteminderagent/forms/js/html5shiv-3.7.0.js"></script>
+            <script src="/siteminderagent/forms/js/respond.min-1.4.2.js"></script>
+    <![endif]-->
+	
+    <!--[if gt IE 8]><!-->
+        <script src="/siteminderagent/forms/js/ie9-above-and-nonie.js"></script>
+    <!--<![endif]-->
+ 
+	<!-- to allow retail to hide links -->
+    <script src="/siteminderagent/forms/js/RetailExternal.js"></script> 
+
+	<!-- Cross-frame scripting prevention: This code will prevent this page from being encapsulated within HTML frames. Remove, or comment out, this code if the functionality that is contained in this SiteMinder page is to be included within HTML frames. -->
+	<SCRIPT>  
+	if (top !=self) 
+	top.location=self.location; 
+	</SCRIPT>
+
+	<SCRIPT LANGUAGE="JavaScript">
+
+	function resetCredFields()
+	{
+	  document.Login.PASSWORD.value = "";
+	  document.Login.USER.value = "";
+	}
+
+	function readCookie(name)
+	{
+		var nameEQ = name + "=";	//search for the name of the cookie, followed by an =
+		var ca = document.cookie.split(';');	//create cookie array (ca)
+		for(var i=0;i < ca.length;i++)	//iterate through ca
+		{
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+		}
+		return null;
+	}
+
+	function loadPage()
+	{
+		
+			resetCredFields();
+			var smtryno = parseInt(readCookie('SMTRYNO'));
+			
+			var chk = document.referrer.toUpperCase();
+			
+			if ( (chk.indexOf("WWW.DOMINIONENERGY.COM") > -1 || chk.indexOf("QA.DOMINIONENERGY.COM") > -1  ) && !smtryno && chk.indexOf("MOBILEQA.DOMINIONENERGY.COM") < 0)
+			{
+				smtryno = 1;
+			}
+						
+			if(!smtryno){
+				smtryno = 0;
+			}
+
+			var errorDiv = document.getElementById("errorDiv");
+			if (smtryno > 0 )
+			{
+					errorDiv.className = "alert alert-warning";   // Set other class name				
+			}
+			else
+			{
+					errorDiv.className = "hidden";   // Set other class name			
+			}			
+
+
+	}
+
+	function submitForm()
+		{
+			document.Login.submit();
+		}
+	
+	function goBack ()
+		{
+			window.history.back();
+		}
+		
+		
+
+	</SCRIPT>
+</head>
+
+<body class="hideWhileLoading"  onLoad = "javascript:loadPage();">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGXXDJB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<form class="form-signin" role="form" name="Login"  method="post">
+
+
+<input type=HIDDEN name=target value="https://mydom.dominionenergy.com/" >
+<input type=HIDDEN name=smusrmsg value="6qr1kT3bT8LWHrajlJvUuwAAAAEAAAPrAAAAIAAAAAA=" >
+<input type=HIDDEN name=smauthreason value="0" >
+<input type=HIDDEN name=smagentname value="9MuHaTndmBnE2/6XM3uvK51bOMgT4jKCNSdlNMM9/EbWt1q3F81EmVIudNx1ceVl" >
+<input type=HIDDEN name=postpreservationdata value="" >
+
+<!-- <INPUT TYPE=HIDDEN NAME="SMENC" VALUE="ISO-8859-1">   -->
+<INPUT type=HIDDEN name="SMLOCALE" value="US-EN">
+
+<!--[if gt IE 7]><!-->
+	<!--Navigation Container that Spans Full Width of the Page-->
+	<div class="navbar-default navbar-fixed-top">
+		<!--Navigation Container with a Max Width Defined by Dominion Energy-->
+		<div class="maxWidthContainer">
+		  <!--Bootstrap Global Navigation Control-->
+		  <nav class="navbar" role="navigation">
+			  <!--Container for Dominion Energy Logo and Mobile Toggle Button-->
+			  <div class="navbar-header">
+				<!--Mobile Global Navigation Toggle Button-->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mydom-nav-menu">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<!--Dominion Energy Logo-->
+				<a class="navbar-brand" href="http://www.dominionenergy.com"><img class="domLogo" alt="Dominion Energy Logo" src="/siteminderagent/forms/images/Logo.PNG" /></a> 
+			  </div>
+			  <!-- Navigation Menu Container -->
+			  <div class="collapse navbar-collapse" id="mydom-nav-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/registration/index" >Register</a></li>
+						<li class="active"><a href="/">Sign In</a></li>		  
+					</ul>
+			  </div>
+			</nav>
+		</div>
+	</div>	
+<!--<![endif]-->
+
+
+
+<!--Content Area Container with a Max Width Defined by Dominion Energy-->
+<div class="maxWidthContainer">
+
+
+	<!--Primary Container for Content on the Page-->
+	<div class="primaryContentContainer">
+		<!--Page Title-->
+		<div>			
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<h1>Sign In</h1>
+			</div>
+			<!--
+			<div class="col-md-12 col-xs-12 col-sm-12">
+				<div class="alert alert-warning">
+					<p><img alt="Warning" title="Warning" src="/siteminderagent/forms/images/fv_Icon-warning.png"></p> 
+                </div>
+			</div>
+			-->
+				<div class="col-md-12 col-xs-12 col-sm-12">
+					Enter your user name and password below to sign in. <a href="/registration/index">Register</a> a profile to manage your Dominion Energy account(s) online. 
+				</div>
+				
+		</div>  
+		<div class="row">					
+			<div class="col-md-7 col-xs-12 col-sm-7 primaryCol">
+					<div id="errorDiv"  class="hidden">	
+						<p><img src="/siteminderagent/forms/images/fv_Icon-warning.png" title="Warning" alt="Warning" /> <strong>Please try again.</strong></p>
+						<p>You have entered an incorrect user name and/or password. After too many unsuccessful attempts, access to your account will be locked for one hour.</p>
+						<p>Please note your password is case sensitive. If you continue to have problems, use our <a href="/registration/forgotpassword">Forgot Your Password?</a> and/or <a href="/registration/forgotusername">Forgot Your User Name?</a> features.</p> 
+					</div>	
+									
+					<!--User Name-->							
+					<div class="form-group">								
+						<label class="control-label formPadding" >
+							<strong>User Name:</strong>	
+						</label>										
+						<input class="form-control" name="USER"  autofocus="" tabindex="1" type="text">																	
+						<div class="row">
+							<a href="/registration/forgotusername">Forgot Your User Name?</a>
+							</div>
+					</div>
+					
+					<!--Password-->
+					<div class="form-group">								
+						<label class="control-label formPadding" >
+							<strong>Password:</strong>	
+						</label>														
+						<input class="form-control"  name="PASSWORD" tabindex="2" type="password" autocomplete="off">																		
+						<div class="row">
+							<a href="/registration/forgotpassword">Forgot Your Password?</a>
+							</div>
+					</div>
+					<!--Buttons-->
+					<div class="form-group">								
+						<button class="btn btn-success buttonInlineMargins" type="submit" tabindex="10" >Submit</button>                               
+						<input type=button class="btn btn-default" onClick="parent.location='https://www.dominionenergy.com/'" value='Cancel'>									
+					</div>
+			</div> <!--Primarycol-->	
+				<!--Contact Us-->
+				<div class="col-md-5 col-xs-12 col-sm-5 sideBarCol">
+				<!--[if gt IE 7]><!-->
+						<div class="greyContentArea">
+								<h3>Need Help?</h3>
+								<p>Please contact us if you have any questions or need further assistance.</p>
+								<a class="btn btn-success" href="https://www.dominionenergy.com/about-us/contact-us"  target="_blank">Contact Us</a>
+						</div>
+				<!--<![endif]-->
+	
+				</div>
+				
+		</div><!--Main Row-->		 
+	</div><!--primary content container-->
+			<!--Footer-->
+			<!--[if gt IE 7]><!-->
+			<div class="row footerContainer">
+				<a class="footer" href="https://www.dominionenergy.com/privacy" target="_blank">Privacy</a> |
+				<a class="footer" href="https://www.dominionenergy.com/terms-and-conditions" target="_blank">Legal<span class="hideOnMobile"> Terms and Conditions</span></a> |			
+				<a class="footer" href="https://www.dominionenergy.com/para-servirlos" target="_blank">Para Servirlos</a>
+			</div>
+			<!--<![endif]-->
+			<!--Copyright-->
+	<div class="row copyright">
+                Copyright &#169; <script>document.write(new Date().getFullYear())</script> Dominion Energy				
+	</div>
+	
+	
+</div>
+
+</form>								
+
+
+</body>
+</html>

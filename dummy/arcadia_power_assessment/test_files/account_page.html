@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!-- Inhibits mobile browser's tendency to add click-to-call functionality to telephone numbers and short dates -->
+        <meta name="format-detection" content="telephone=no">
+
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="icon" type="image/x-icon" href="/Images/dominion.ico" >
+<link rel="shortcut icon" type="image/x-icon" href="/Images/dominion.ico" >
+<link rel="apple-touch-icon" href="/Images/apple-touch-icon.png">
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="/Images/apple-touch-icon-precomposed.png">
+
+<!-- For the iPad mini and the first- and second-generation iPad on iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/Images/apple-touch-icon-ipad-standard-precomposed.png">
+
+<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/Images/apple-touch-icon-iphone-hidef-precomposed.png">
+
+<!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/Images/apple-touch-icon-ipad-hidef-precomposed.png">
+
+<!-- For iPhone with high-resolution Retina display running iOS ≥ 8: -->
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/Images/apple-touch-icon-iphone6-hidef-precomposed.png">
+
+    
+    <link href="/Content/bootstrap-css?v=9Uf6L6dm4FHwHMa_ah0z6sn7E2fQ9hSC14g7KVCHWE81" rel="stylesheet"/>
+
+    <link href="/Content/dominion-css?v=h4t8eEBfVrYZ8Wn4mF4OMurJrzv_7xqAwcL8OL-3E981" rel="stylesheet"/>
+    
+
+    
+    <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
+
+
+    
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="/Scripts/html5shiv-3.7.0.js"></script>
+        <script type="text/javascript" src="/Scripts/respond.min-1.4.2.js"></script>
+    <![endif]-->
+
+    <script src="/bundles/modernizr?v=dUz_C7QKTmbjqpHGnN4fhYIhS-YQnnG5Pqseul2b8PQ1"></script>
+
+    <script src="/bundles/jquery?v=1y-QX_Yvjrzo7BIFQKChZDKJvIZ-fkOpAnVR-X02yuk1"></script>
+
+    <script src="/bundles/bootstrap?v=sUYZ8ld3inWwioXtvBYlOE5_hSq8wStwm0_8nauYSfU1"></script>
+
+
+    <!--[if lte IE 8]> 
+        <script type="text/javascript" src="/Scripts/Shared/ie8-and-below.js"></script>
+    <![endif]-->
+
+    
+    <!--[if gt IE 8]><!-->
+        <script type="text/javascript" src="/Scripts/Shared/ie9-above-and-nonIE.js"></script>
+    <!--<![endif]-->
+
+    
+    <script type="text/javascript" src="/Scripts/Shared/Ajax.js"></script>
+
+    
+    <script type="text/javascript" src="/Scripts/Shared/_Layout.cshtml.js"></script>	
+
+
+    
+
+
+        
+        
+
+        <title>Dominion Energy :: My Account Overview</title>
+
+    </head>
+    <body class="body-fixedheader-padding hideWhileLoading">
+        <div id='LoadingModal' class='modal fade bs-example-modal-sm' tabindex='-1' role='dialog' aria-labelledby='mySmallModalLabel' aria-hidden='true'><div class='modal-dialog modal-sm'><div id='divLoadingModalContainer' class='modal-content modalContainer'><img id='imgLoadingModalSpinner' src='/Images/ajax-loader-lrg.gif' /><div><h3 id='divLoadingModalMessage'></h3></div></div></div></div>
+        <input id="accountnumber" name="BaseResponse.AccountNumber" type="hidden" value="2308198205" />
+        <input id="uuid" name="BaseResponse.UUID" type="hidden" value="300000000003619500" />
+        <input data-val="true" data-val-required="The BusinessNotificationFunctions field is required." id="BusinessNotificationFunction" name="BusinessNotificationFunction" type="hidden" value="myahome" />
+        <input id="BaseResponse_AccountStatusCode" name="BaseResponse.AccountStatusCode" type="hidden" value="A" />
+         
+        <!--Navigation Container that Spans Full Width of the Page-->
+		<div class="navbar-default navbar-fixed-top" id="topMainNav">
+			<!--Navigation Container with a Max Width Defined by Dominion-->
+			<div class="maxWidthContainer">
+			  <!--Bootstrap Global Navigation Control-->
+			  <nav class="navbar" role="navigation">
+				  <!--Container for Dominion Energy Logo and Mobile Toggle Button-->
+				  <div class="navbar-header">
+                    <!--Mobile Action Navigation Toggle Button-->
+                    <button id="actionBtn" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mydom-nav-menu-mobile">
+					    <span class="sr-only">Toggle Action navigation</span>
+                        <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+					    <span class="icon-bar"></span>
+                    </button>
+
+					<!--Dominion Energy Logo-->
+					<a class="navbar-brand" href="//www.dominionenergy.com"><img class="domLogo" alt="Dominion Energy Logo" src="/Images/Logo.PNG" /></a>
+				  </div>
+				  
+
+<!-- Navigation Menu Container -->
+
+<div class="collapse navbar-collapse navbar-right" id="mydom-nav-menu">
+    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://mydom.dominionenergy.com/MyAccounts">My Account(s)</a></li>
+                            <li><a title="abhalla1" href="https://mydom.dominionenergy.com/MyProfile">My Profile</a></li>
+                            <li><a href="https://mydom.dominionenergy.com/home/signout">Sign Out</a></li>
+    </ul>
+</div>
+
+
+<div class="collapse navbar-collapse" id="mydom-nav-menu-mobile">
+    <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+        <li>
+            <a href="/home/index/?d=t">Home</a>
+        </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Billing &amp; Payments<b class="caret"></b></a>
+                        <ul id="BillingPayments_menuId" class="dropdown-menu">
+                                <li><a href="/billing/billing">Billing</a></li>
+                                <li><a href="/billing/payment">Payment</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+                        <ul id="Services_menuId" class="dropdown-menu">
+                                <li><a href="/account/service">Start/Stop/Transfer Service</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Energy Use &amp; Conservation<b class="caret"></b></a>
+                        <ul id="EnergyUseConservation_menuId" class="dropdown-menu">
+                                <li><a href="/usage/dailyenergyusage">Detailed Energy Usage</a></li>
+                                <li><a href="/usage/analyzeyourenergyusage">Analyze Energy Usage</a></li>
+                                <li><a href="/usage/conservation">Energy Conservation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account Information<b class="caret"></b></a>
+                        <ul id="AccountInformation_menuId" class="dropdown-menu">
+                                <li><a href="/account/editaccountsettings">Change Account Information</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://mydom.dominionenergy.com/MyAccounts">My Account(s)</a></li>
+                    <li><a href="https://mydom.dominionenergy.com/MyProfile">My Profile</a></li>
+                    <li><a href="https://mydom.dominionenergy.com/home/signout">Sign Out</a></li>
+        
+    </ul>
+</div>
+                  
+				</nav>
+			</div>
+            <div class="fixedMenuSeparator"></div>
+		</div>	
+
+        <!--Content Area Container with a Max Width Defined by Dominion-->
+		<div class="maxWidthContainer">
+			<!--Primary Container for Content on the Page-->
+			<div class="primaryContentContainer primaryContentContainerPadding">
+                <span class="pull-right small currentUserPadding"><strong>Current User: </strong>abhalla1</span>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 noPadding">
+<script type="text/javascript" src="/Scripts/Shared/_AccountSummaryInfo.cshtml.js"></script>
+
+
+
+<div class="maxWidthContainer" id="accountSummaryInfoArea">
+	<div class="primaryContentContainer primary-padding-top">
+        <div class="row accountInfo">	
+            <div id="expandableDiv" class="row">	
+                <div class="col-md-10 col-sm-10 col-xs-10">
+                    <h5 id="expanderHead" class="expandableInfo">Account Summary Info </h5>
+                 </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <img id="expanderSign" class="expandableIcon summary-open pull-right" src="/Images/chevron-up.png" />
+                </div>
+            </div>
+            <div id="expanderContent">
+                <div class="col-md-4 col-sm-4 col-xs-12 summaryCol">
+                    <span>Account Number:</span>
+                    <br />
+<select class="form-control input-sm" id="ddlAccountDropdownList" name="AccountListDropDown"><option selected="selected" value="Rm7OotuZWftQo8haZ/G8IVRGFefcHfpC">2308198205: 2308198205</option>
+<option value="drtJxjR0KGbN5aNJiZKsD44y8BiXKrV6">822: 2702298973</option>
+</select>                        <img id="imgDefaultLoading" src="/Images/ajax-loader.gif" style="display:none;" /><input checked="checked" id="chkDefaultAccount" name="DefaultAccount" type="checkbox" value="true" /><input name="DefaultAccount" type="hidden" value="false" /> Default Account
+                </div>
+	            <div class="col-md-4 col-sm-4 col-xs-12 summaryCol">
+                    <span>Name(s) on Account:</span>
+                    <br />
+                    <span id="account-summary-info-accountname">
+
+ARUSHI BHALLA <br />
+                    </span>
+	            </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 summaryCol">
+                    <span>Service Address:</span>
+                    <br />
+                    <span id="account-summary-info-serviceaddress">
+                        851 N GLEBE RD 1321
+                        <br>
+                        ARLINGTON, <span id="account-summary-info-serviceaddress-state"> VA</span> 22203
+                    </span>
+                </div>
+            </div>	
+        </div>
+	</div>
+</div>
+
+<input id="AccountSummaryToggle" name="AccountSummaryToggle" type="hidden" value="" />
+                        </div>	
+                    </div>
+                <div class="row" id="_BusinessNotificationArea"></div>
+                <div class="row">	
+                        <div class="col-md-3 col-sm-3 hidden-xs noPadding" id="_ActionMenu" >
+                            <div class="makeSticky">
+<script type="text/javascript" src="/Scripts/Shared/_ActionMenu.cshtml.js"></script>
+
+
+
+<tbody>
+    <tr>
+        <td>
+            <div id="rhNav">
+                <div id="panel-menu">
+                    <dl>
+                        <dt id="homeMenu"><span class="home"><a href="/home/index/?d=t">Home</a></span></dt>
+                            <dt><span class="opened">Billing &amp; Payments</span></dt>
+                            <dd class="open">
+                                <ul>
+                                        <li id="Billing_liId" class="actionMenuLi"><a href="/billing/billing">Billing</a></li>
+                                        <li id="Payment_liId" class="actionMenuLi"><a href="/billing/payment">Payment</a></li>
+                                </ul>
+                            </dd>
+                            <dt><span class="opened">Services</span></dt>
+                            <dd class="open">
+                                <ul>
+                                        <li id="StartStopTransferService_liId" class="actionMenuLi"><a href="/account/service">Start/Stop/Transfer Service</a></li>
+                                </ul>
+                            </dd>
+                            <dt><span class="opened">Energy Use &amp; Conservation</span></dt>
+                            <dd class="open">
+                                <ul>
+                                        <li id="DetailedEnergyUsage_liId" class="actionMenuLi"><a href="/usage/dailyenergyusage">Detailed Energy Usage</a></li>
+                                        <li id="AnalyzeEnergyUsage_liId" class="actionMenuLi"><a href="/usage/analyzeyourenergyusage">Analyze Energy Usage</a></li>
+                                        <li id="EnergyConservation_liId" class="actionMenuLi"><a href="/usage/conservation">Energy Conservation</a></li>
+                                </ul>
+                            </dd>
+                            <dt><span class="opened">Account Information</span></dt>
+                            <dd class="open">
+                                <ul>
+                                        <li id="ChangeAccountInformation_liId" class="actionMenuLi"><a href="/account/editaccountsettings">Change Account Information</a></li>
+                                </ul>
+                            </dd>
+                    </dl>
+                </div>
+            </div>
+        </td>
+    </tr>
+</tbody>
+                            </div>
+                        </div>
+                            <div class="col-md-6 col-sm-9 mainContent mainViewMargin" id="_MainView1" >
+                                <h1>My Account Overview</h1>
+                                <div class="row" id="_PageNotificationArea"></div>
+		                        
+
+
+
+<!--[if lte IE 8]>
+    <script language="javascript" type="text/javascript" src="/Scripts/flot/excanvas.min.js">
+    </script>
+<![endif]-->
+
+<script type="text/javascript" src="/Scripts/flot/jquery.flot.min.js"></script>
+<script type="text/javascript" src="/Scripts/flot/jquery.flot.symbol.min.js"></script>
+<script type="text/javascript" src="/Scripts/flot/jquery.flot.time.min.js"></script>
+<script type="text/javascript" src="/Scripts/Home/Index.cshtml.js"></script>
+<script type="text/javascript" src="/Scripts/Shared/ViewBillImage.js"></script>
+<script type="text/javascript" src="/Scripts/Shared/PrintFriendly.js"></script>
+
+<div id="homepageContent" class="col-md-12 col-xs-12 col-sm-12 primaryCol homeIndexPadding">
+
+        <div id="warningMessagesDiv">
+
+
+
+
+        </div>    
+         <!-- Billing & Payment Info -->
+
+    <!--Pending Payments-->
+	
+
+    <!--Total Amount Due By-->
+    <div class="row rowHeadingBorder mobileGreyRow">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+            <h5>Total Amount Due By</h5>
+		</div>
+	</div>
+    <div class="row contentRowPadding">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+
+            <p>
+                <span class="bodyTextGreen"> August 16, 2018</span>
+                <span 
+                    data-trigger="click hover" 
+                    data-delay="200" 
+                    data-toggle="tooltip" 
+                    data-placement="auto" 
+                    title="The due date stated is for your current charges only. If the amount due includes a previous balance, those charges may now be past due." >
+                    <img src="/Images/question-mark.png" /> 
+                </span>
+            </p>
+		</div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+                <p><span class="bodyTextGreen">$114.09</span></p>
+		</div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+
+                    <span class="desktop-pull-right">
+                        <a href="/Payment">Pay Now for Free</a>
+                    </span>
+		</div>
+	</div>
+
+    <!-- Payment Extension -->
+
+    <!--Last Payment Recieved On-->
+	<div class="row rowHeadingBorder mobileGreyRow">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<h5>Last Payment Received On</h5>
+		</div>
+	</div>
+    <div class="row contentRowPadding">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+
+			<p>July 10, 2018</p>
+		</div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+            <p>$121.14</p>
+		</div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+            <span class="desktop-pull-right">
+                <a href="/Usage/ViewPastUsage">Payment History</a>
+            </span>
+		</div>
+	</div>
+
+    <!--Current Charges Billed On-->
+    <div class="row rowHeadingBorder mobileGreyRow">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<h5>Current Charges Billed On</h5>
+		</div>
+	</div>
+    <div class="row contentRowPadding">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+
+			<p>July 25, 2018</p>
+		</div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+			<p>$114.09</p>
+		</div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+                <span class="desktop-pull-right">
+                    <span class="span-link link-tracking" link-tracking-title="View Current Bill PDF" onclick="EMYAViewBillImage.getBillImage('TzR0ZanYXn8ZBd9XBQX8Ug==')">View Bill</span>
+                </span>
+		</div>
+	</div>
+
+    <!--Payment Plan-->
+    
+    <!--Next Bill Date-->
+    <div class="row rowHeadingBorder mobileGreyRow">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<h5>Next Bill Date</h5>
+		</div>
+	</div>
+    <div class="row contentRowPadding">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+
+			<p>August 23, 2018</p>
+		</div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <span class="desktop-pull-right">
+                <a href="/Billing/ViewPastBills">View Past Bills</a>
+            </span>
+		</div>
+	</div>
+        <!--Adobe Reader Download-->
+       <br />
+        <h2>My Enrollments</h2>
+         <!--My Enrollments(s)-->
+        <div class="row rowHeadingBorder mobileGreyRow">
+		    <div class="col-md-12 col-sm-12 col-xs-12">
+			    <h5>Programs Enrolled?</h5>
+		    </div>        
+	    </div>
+        <div id="pgrmEnrollments" class="contentProgramRowPadding">
+            <div class="row enrollTypeHeader vertical-align">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+			        <p>eBill (<a href="//www.dominionenergy.com/home-and-small-business/billing-options/ebill" target="_blank">Learn More</a>)</p>
+		        </div>
+		        <div class="col-md-2 col-sm-2 col-xs-12">
+			        <p>Yes</p>
+		        </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <span class="desktop-pull-right">
+<a class="btn btn-warning" href="/Billing/StopEBill">Un-Enroll</a>                    </span>
+		        </div>
+            </div>
+                <div class="row enrollTypeHeader vertical-align" id="divTextAlertContainer">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p>eBill Text Alerts (<a href="https://www.dominionenergy.com/home-and-small-business/billing-options/ebill-text-alerts" target="_blank">Learn More</a>)</p>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <p>No</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span class="desktop-pull-right">
+<a class="btn btn-success" href="/Billing/TextAlert">Enroll Now</a>                        </span>
+                    </div>
+                 </div>
+                                    <div class="row enrollTypeHeader vertical-align">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+			        <p>Bank Draft  (<a href="//www.dominionenergy.com/home-and-small-business/payment-options/bank-draft" target="_blank">Learn More</a>)</p>
+		        </div>
+		        <div class="col-md-2 col-sm-2 col-xs-12">
+			        <p>No</p>
+		        </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <span class="desktop-pull-right">
+<a class="btn btn-success" href="/Billing/BankDraft">Enroll Now</a>                    </span>
+		        </div>
+            </div>
+
+                <div class="row enrollTypeHeader vertical-align">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+			            <p>Budget Billing (<a href="//www.dominionenergy.com/home-and-small-business/billing-options/budget-billing" target="_blank">Learn More</a>)</p>
+		            </div>
+		            <div class="col-md-2 col-sm-2 col-xs-12">
+			            <p>No</p>
+		            </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span class="desktop-pull-right">
+<a class="btn btn-success" href="/Billing/BudgetBilling">Enroll Now</a>                        </span>
+		            </div>
+                </div>
+            	    </div>
+        <br /><br />
+        <!--My Energy Usage-->
+        <h2>My Energy Usage</h2>
+        <input type="hidden" id="UsageDataArrHdn" value="[[1532404800000,1098],[1529640000000,985],[1527048000000,859],[1524542400000,674],[1521777600000,631],[1519275600000,482],[1516770000000,604],[1513918800000,638],[1511326800000,798],[1508731200000,1022],[1506052800000,1081],[1503460800000,1138],[1500955200000,1272],[1498190400000,957],[1495598400000,751],[1493092800000,961],[1490328000000,582],[1487826000000,493],[1485320400000,704]]" />
+            <input type="hidden" id="UsageDateArrHdn" value="07/24/2018,06/22/2018,05/23/2018,04/24/2018,03/23/2018,02/22/2018,01/24/2018,12/22/2017,11/22/2017,10/23/2017,09/22/2017,08/23/2017,07/25/2017,06/23/2017,05/24/2017,04/25/2017,03/24/2017,02/23/2017,01/25/2017" />
+            <div class="row lineGraphPadding">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-1 col-sm-1 col-xs-1">
+                        <div class="kwh_img"><img src="/Images/KilowattHoursAxisLabel.png" /></div>
+                    </div>
+                    <div class="col-md-11 col-sm-11 col-xs-11">
+                        <div class="img-responsive flot-text-override" id="indexPage_usage_chart"></div>
+                    </div>
+                </div>
+            </div>
+         <!--Next Meter Read Date-->
+            <div class="row rowHeadingBorder mobileGreyRow">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h5>Next Meter Read Date</h5>
+                </div>
+            </div>
+            <div class="row contentRowPadding">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <p>August 22, 2018</p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <span class="desktop-pull-right">
+                        <a href="/Usage/ViewPastUsage">View Past Usage</a>
+                    </span>
+                </div>
+            </div>
+            <br />
+
+    
+</div>
+
+
+
+	                        </div>
+                            <div class="col-md-3 visible-md visible-lg pull-right adsPadding" id="ads-column">
+<script type="text/javascript" src="/Scripts/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="/Scripts/Shared/_Ads.cshtml.js"></script>
+
+            <div>
+                <div id="ad-rotator">
+                    
+                            <span id="spn_ad-rotator">
+                                <a class="classAd" href="//www.dominionenergy.com/ebillpromo" target="_blank"><img alt="Ad" src="//www.dominionenergy.com/library/mya/icons - new format/stay-on-ebill-you-could-win-a-road-trip-mya-ad.png" /></a>
+                            </span>
+                            <span id="spn_ad-rotator">
+                                <a class="classAd" href="~/account/service" target="_blank"><img alt="Ad" src="//www.dominionenergy.com/library/mya/icons - new format/start-transfer-service-online-you-could-win-400-dollars-mya-ad.png" /></a>
+                            </span>
+                            <span id="spn_ad-rotator">
+                                <a class="classAd" href="//www.dominionenergy.com/community/customer-newsletters?utm_source=MYA&amp;utm_medium=Icon&amp;utm_campaign=July_2018_Customer_Newsletter" target="_blank"><img alt="Ad" src="//www.dominionenergy.com/library/mya/icons - new format/stay-updated-view-this-months-newsletter-mya-ad.png" /></a>
+                            </span>
+                            
+                </div>
+            </div>
+            <div>
+                <a class="classAd" href="//www.dominionenergy.com/safety/public-safety/scammers-and-personal-safety" target="_blank"><img alt="Ad" src="//www.dominionenergy.com/library/mya/icons - new format/beware-of-scams-and-imposters-mya-ad.png" /></a>
+            </div>
+            <div>
+                <a class="classAd" href="~/Billing/Payment" target="_blank"><img alt="Ad" src="//www.dominionenergy.com/library/mya/icons - new format/various-payment-options-available-mya-ad.png" /></a>
+            </div>
+
+
+                            </div>
+                    
+                    
+                </div>
+			</div>
+
+             <!--Footer-->
+			<div class="row footerContainer">				
+				<a class="footer" target="_blank" href="//www.dominionenergy.com/terms-and-conditions">Legal<span class="hideOnMobile"> Terms and Conditions</span></a> |			
+                <a class="footer" target="_blank" href="//www.dominionenergy.com/privacy">Privacy</a> |
+				<a class="footer hideOnMobile" target="_blank" href="//www.dominionenergy.com/para-servirlos">Para Servirlos</a><span class="hideOnMobile"> | </span>
+				<a class="footer" target="_blank" href="//www.dominionenergy.com/about-us/contact-us">Contact Us</a>
+			</div>
+		
+            <!--Copyright-->
+			<div class="row copyright topBottomPadding">
+				Copyright © 2018 Dominion Energy
+			</div>
+
+		</div>
+        <input type="hidden" id="hdn-page-error" />
+        
+<!--Place in <head>-->
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4QLZVB');</script>
+<!-- End Google Tag Manager -->
+
+
+<!--Place after immedately after <body>-->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4QLZVB"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script src="/Scripts/Tracking/Webtrends.js"></script>
+
+<!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2014 Webtrends Inc.  All rights reserved. -->
+<!-- Version: 9.4.0 -->
+<!-- Tag Builder Version: 4.1  -->
+<!-- Created: 3/17/2014 7:07:43 PM -->
+<script type="text/javascript">
+    //<![CDATA[
+    var _tag = new WebTrends();
+    _tag.dcsGetId();
+    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () {
+        _tag.dcsCustom = function () {
+            // Add custom parameters here.
+            //_tag.DCSext.param_name=param_value;
+        }
+        _tag.dcsCollect();
+    });
+    //]]>
+</script>
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//statse.webtrendslive.com/dcso2mqc710000kflmur4u0ui_3n8m/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.10.108.164.63"/></div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
+
+
+        
+    </body>
+</html>
