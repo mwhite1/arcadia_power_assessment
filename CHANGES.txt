@@ -1,1 +1,1 @@
-v0.0.2, 20181118 -- Upgraded Requests package to mitigate security vulnerability.
+v0.0.3, 20181118 -- Upgraded Requests package to mitigate security vulnerability.
