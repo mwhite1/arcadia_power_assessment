@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='arcadia_power_assessment',
-    version='0.0.1',
+    version='0.0.2',
     author='Malcolm White',
     author_email='malcolm.m14@gmail.com',
     packages=['billinfoscraper', 'billinfoscraper.test'],
@@ -14,7 +14,7 @@ setup(
     install_requires=[
         "beautifulsoup4==4.6.0",
         "mock==2.0.0",
-        "requests==2.19.1",
+        "requests",
         "urllib3==1.23"
     ],
 )

@@ -1,1 +1,1 @@
-v0.0.1, 20181117 -- Corrected erroneous packages.
+v0.0.2, 20181118 -- Upgraded Requests package to mitigate security vulnerability.
