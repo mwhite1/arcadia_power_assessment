@@ -15,6 +15,6 @@ setup(
         "beautifulsoup4==4.6.0",
         "mock==2.0.0",
         "requests==2.20",
-        "urllib3==1.23"
+        "urllib3==1.24.2"
     ],
 )
